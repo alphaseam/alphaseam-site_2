@@ -1,0 +1,162 @@
+.about-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 100px 20px 60px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.about-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00f7ff;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  max-width: 850px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.section-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 30px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+.section-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+.section-card h2,
+.section-card h3 {
+  color: #00f7ff;
+  margin-bottom: 15px;
+}
+
+.section-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.section-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.section-card li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-card .icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #00f7ff;
+}
+
+.glowing {
+  box-shadow: 0 0 25px #00f7ff, 0 0 50px #00f7ff inset;
+  border: 1px solid #00f7ff;
+}
+
+/* Timeline Section */
+.timeline-section {
+  margin-top: 100px;
+  padding: 40px 20px;
+}
+
+.timeline {
+  position: relative;
+  margin: 40px auto;
+  padding-left: 40px;
+  border-left: 4px solid #00f7ff;
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background: #00f7ff;
+  border-radius: 50%;
+  position: absolute;
+  left: -12px;
+  top: 5px;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #00f7ff;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .about-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .section-card h2,
+  .section-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timeline-dot {
+    left: -10px;
+  }
+}
