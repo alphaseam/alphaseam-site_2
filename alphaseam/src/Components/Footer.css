@@ -100,7 +100,6 @@
   animation: fadeIn 1.2s ease-out;
 }
 
-/* Animations */
 @keyframes slideFadeIn {
   from {
     transform: translateY(40px);
@@ -121,7 +120,6 @@
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;

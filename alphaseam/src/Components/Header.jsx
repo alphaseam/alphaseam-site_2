@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 import logoWhite from '../assets/Navbar/logowhite.png';
 import logoBlack from '../assets/Navbar/logoblack.png';
@@ -7,6 +7,7 @@ import logoBlack from '../assets/Navbar/logoblack.png';
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,26 +17,39 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <Link to="/" className="logo">
-          <img src={scrolled ? logoBlack : logoWhite} alt="Logo" className="logo-img" />
-        </Link>
+        <div className="logo-hamburger">
+          <Link to="/" className="logo">
+            <img
+              src={scrolled ? logoBlack : logoWhite}
+              alt="Logo"
+              className="logo-img"
+            />
+          </Link>
 
-        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+          <div
+            className={`menu-toggle ${menuOpen ? 'active' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span className={`bar ${scrolled ? 'dark' : ''}`}></span>
+            <span className={`bar ${scrolled ? 'dark' : ''}`}></span>
+            <span className={`bar ${scrolled ? 'dark' : ''}`}></span>
+          </div>
         </div>
 
-        <nav className={`nav-links ${menuOpen ? 'active' : ''}`}>
-          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-          <Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link>
-          <Link to="/career" onClick={() => setMenuOpen(false)}>Career</Link>
-          <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
-          <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+        <nav className={`nav-links ${menuOpen ? 'active' : ''} ${scrolled ? 'scrolled-nav' : ''}`}>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/career">Career</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
       </div>
     </header>

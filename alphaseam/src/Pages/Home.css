@@ -1,6 +1,4 @@
-/* ==========  HOME.CSS  (FULL, UPDATED)  ========== */
 
-/* ===== GLOBAL ===== */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -17,7 +15,6 @@ h2 {
   color: #00d9ff;
 }
 
-/* ===== HERO SECTION ===== */
 .hero-section {
   position: relative;
   height: 100vh;
@@ -89,7 +86,6 @@ h2 {
   color: #000;
 }
 
-/* ===== SERVICES SECTION ===== */
 .services-section {
   padding: 100px 5vw;
   background: linear-gradient(to right, #0e1628, #1a2a3c);
@@ -139,7 +135,6 @@ h2 {
   font-size: 0.95rem;
 }
 
-/* ===== ABOUT SECTION ===== */
 .about-section {
   background: linear-gradient(to right, #1c2e4a, #101f33);
   padding: 100px 5vw;
@@ -196,7 +191,6 @@ h2 {
   box-shadow: 0 12px 24px rgba(0, 217, 255, 0.15);
 }
 
-/* ===== INDUSTRIES SECTION ===== */
 .industries-section {
   position: relative;
   padding: 120px 5vw;
@@ -276,7 +270,6 @@ h2 {
   letter-spacing: 0.5px;
 }
 
-/* ===== CASE STUDIES SECTION ===== */
 .case-studies-section {
   padding: 100px 5vw;
   background: radial-gradient(circle at top left, #16253a, #0d1b2a);
@@ -323,7 +316,6 @@ h2 {
   font-size: 1rem;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .hero-section {
     height: 70vh;

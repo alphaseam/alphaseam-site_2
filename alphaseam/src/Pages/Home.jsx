@@ -70,7 +70,6 @@ const Home = () => {
 
   return (
     <>
-      {/* Hero Section */}
       <section className="hero-section">
         <video className="hero-video" autoPlay muted loop playsInline>
           <source src={heroVideo} type="video/mp4" />
@@ -81,14 +80,13 @@ const Home = () => {
           <p>Digital Transformation through modern web & mobile app development</p>
           <button
             className="hero-btn"
-            onClick={() => navigate("/contact")} // ✅ Navigate to Contact page
+            onClick={() => navigate("/contact")} 
           >
             Get in Touch
           </button>
         </div>
       </section>
 
-      {/* Services Section */}
       <section className="services-section" data-aos="fade-up">
         <h2>Our Expertise</h2>
         <div className="services-grid">
@@ -102,7 +100,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Section */}
       <section className="about-section" data-aos="fade-up">
         <div className="about-content">
           <div className="about-text">
@@ -121,7 +118,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Industries Section */}
       <section className="industries-section" data-aos="fade-up">
         <h2>Industries We Serve</h2>
         <div className="industries-grid">
@@ -134,7 +130,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Case Studies Section */}
       <section className="case-studies-section" data-aos="fade-up">
         <h2>Case Studies</h2>
         <div className="case-studies-grid">
