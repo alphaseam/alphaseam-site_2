@@ -1,4 +1,4 @@
-/* Global Styles */
+/* ======== Global Styles ======== */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -26,13 +26,14 @@ h2 {
   100% { background-position: 200% center; }
 }
 
-/* Hero Section */
+/* ======== Hero Section ======== */
 .hero-section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   padding-left: 10vw;
   background: #000;
   z-index: 1;
@@ -78,12 +79,6 @@ h2 {
   background: linear-gradient(90deg, #00ffe7, #aaffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* animation: pulseText 3s ease-in-out infinite; */
-}
-
-@keyframes pulseText {
-  0%, 100% { text-shadow: 0 0 10px #00d9ff; }
-  50% { text-shadow: 0 0 20px #00d9ff, 0 0 30px #00f2ff; }
 }
 
 .hero-content p {
@@ -92,7 +87,6 @@ h2 {
   margin-bottom: 30px;
 }
 
-/* 💡 Updated Stylish Hero Button */
 .hero-btn {
   position: relative;
   display: inline-block;
@@ -131,7 +125,7 @@ h2 {
   box-shadow: 0 0 15px #00f2ff, 0 0 40px #00d9ff;
 }
 
-/* Services Section */
+/* ============ Services ============ */
 .services-section {
   padding: 100px 5vw;
   background: linear-gradient(135deg, #0e1628, #111e33);
@@ -181,7 +175,7 @@ h2 {
   color: #ccc;
 }
 
-/* About Section */
+/* ============ About ============ */
 .about-section {
   padding: 100px 5vw;
   background: linear-gradient(to right, #1a2f47, #101c30);
@@ -238,12 +232,10 @@ h2 {
   box-shadow: 0 16px 40px rgba(0, 217, 255, 0.2);
 }
 
-/* Industries */
+/* ============ Industries ============ */
 .industries-section {
   padding: 120px 5vw;
-  position: relative;
   background: #0b1a2f;
-  overflow: hidden;
 }
 
 .industries-grid {
@@ -285,7 +277,7 @@ h2 {
   font-weight: 600;
 }
 
-/* Case Studies */
+/* ============ Case Studies ============ */
 .case-studies-section {
   padding: 100px 5vw;
   background: radial-gradient(circle at top left, #142436, #0c1a2d);
@@ -331,32 +323,77 @@ h2 {
   font-size: 1rem;
 }
 
-/* Responsive Enhancements */
-@media (max-width: 768px) {
+/* ============ Responsive ============ */
+@media (max-width: 992px) {
+  h2 {
+    font-size: 2.2rem;
+  }
+
   .hero-section {
     flex-direction: column;
     justify-content: center;
-    padding: 0 5vw;
-    height: 80vh;
+    align-items: center;
+    padding: 60px 6vw;
     text-align: center;
   }
 
   .hero-content h1 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
   }
 
-  .services-grid,
-  .industries-grid,
-  .case-studies-grid {
-    grid-template-columns: 1fr;
+  .hero-content p {
+    font-size: 1.05rem;
   }
 
-  .about-content {
-    flex-direction: column;
+  .about-text h2 {
+    font-size: 2.2rem;
   }
 
-  .about-text,
-  .about-image {
-    text-align: center;
+  .about-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-btn {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p,
+  .industry-card p,
+  .service-card p,
+  .case-card p {
+    font-size: 0.95rem;
+  }
+
+  .case-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .industry-card img,
+  .service-card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .case-card img {
+    height: 160px;
   }
 }

@@ -190,3 +190,8 @@
     background: black;
   }
 }
+
+/* =========== FIX FOR HEADER OVERLAP =========== */
+.hero-section {
+  padding-top: 100px; /* Adjust based on header height */
+}
