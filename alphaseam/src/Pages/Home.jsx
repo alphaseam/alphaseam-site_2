@@ -6,17 +6,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import heroVideo from "../assets/home/bg9_video.mp4";
-import service1 from "../assets/About/hero.jpg";
-import service2 from "../assets/About/hero.jpg";
-import service3 from "../assets/About/hero.jpg";
-import aboutImg from "../assets/About/hero.jpg";
-import industry1 from "../assets/About/hero.jpg";
-import industry2 from "../assets/About/hero.jpg";
-import industry3 from "../assets/About/hero.jpg";
-import industry4 from "../assets/About/hero.jpg";
-import case1 from "../assets/About/hero.jpg";
-import case2 from "../assets/About/hero.jpg";
-import case3 from "../assets/About/hero.jpg";
+import service1 from "../assets/home/home1.jpg";
+import service2 from "../assets/home/home2.jpg";
+import service3 from "../assets/home/home3.jpg";
+import aboutImg from "../assets/home/home4.jpg";
+import industry1 from "../assets/home/home5.jpg";
+import industry2 from "../assets/home/home6.jpg";
+import industry3 from "../assets/home/home7.jpg";
+import industry4 from "../assets/home/home8.jpg";
+import case1 from "../assets/home/home9.jpg";
+import case2 from "../assets/home/home10.jpg";
+import case3 from "../assets/home/home11.jpg";
 
 const services = [
   {
