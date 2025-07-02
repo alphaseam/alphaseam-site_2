@@ -30,7 +30,8 @@
 .logo-hamburger {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 32px;
   width: 100%;
 }
 
@@ -130,10 +131,11 @@
   }
 
   .logo-hamburger {
-    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 28px;
+    width: 100%;
   }
 
   .logo-img {
@@ -191,7 +193,7 @@
   }
 }
 
-/* =========== FIX FOR HEADER OVERLAP =========== */
-.hero-section {
-  padding-top: 100px; /* Adjust based on header height */
+.hero-section,
+.page-content {
+  padding-top: 100px;
 }
